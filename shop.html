@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <title>Ecommerce Jewellery Website</title>
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> 
+  <!-- OWN CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive-style.css">
+  <link type="image/x-icon" href="images/favicon.ico" rel="shortcut icon">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+  <!-- header design -->
+  <header>
+   
+    <nav class="navbar navbar-expand-lg navigation-wrap">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img decoding="async" src="images/JwAst.png" width="100" height="75">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <i class="fas fa-stream navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <br><br><br><br><br>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">City</th>
+    <th style="width:40%;">Adress</th>
+  </tr>
+  <tr>
+    <td>Almaty</td>
+    <td>Panfilova 52</td>
+  </tr>
+  <tr>
+    <td>Astana</td>
+    <td>Kabanbai batyr 59/2</td>
+  </tr>
+  <tr>
+    <td>Shymkent</td>
+    <td>Saryarka 3</td>
+  </tr>
+  <tr>
+    <td>Karagandy</td>
+    <td>Buhar-Zhurau 55</td>
+  </tr>
+</table>
+<script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+    
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+
+<section id="products" class="products">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-content text-center">
+            <h2>Welcome to our shop</h2>
+          </div>
+          <div class="col-12">
+            <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="jwellery-tab" data-bs-toggle="tab" data-bs-target="#jwellery"
+                  type="button" role="tab" aria-controls="jwellery" aria-selected="true">Bracelets</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ring-tab" data-bs-toggle="tab" data-bs-target="#ring" type="button"
+                  role="tab" aria-controls="ring" aria-selected="false">Rings</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="earings-tab" data-bs-toggle="tab" data-bs-target="#earings" type="button"
+                  role="tab" aria-controls="earings" aria-selected="false">Earrings</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="earings-tab" data-bs-toggle="tab" data-bs-target="#earings" type="button"
+                  role="tab" aria-controls="earings" aria-selected="false">Watches</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="jwellery" role="tabpanel" aria-labelledby="jwellery-tab">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/br5.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Gold bracelets with brilliant</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$3000.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/br2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium and red gold bracelets</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$3500.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/br2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium and red gold bracelets</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$3500.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/br2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium and red gold bracelets</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$3500.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/br2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium and red gold bracelets</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$3500.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div><div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/br2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium and red gold bracelets</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$3500.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/br3.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Bracelets with pearl</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$2000.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/br4.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Silver bracelets mixed gold</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$1200.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="ring" role="tabpanel" aria-labelledby="ring-tab">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/rin1.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/rin3.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/rin2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/rin2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/rin2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/rin2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/rin2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/rin4.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="earings" role="tabpanel" aria-labelledby="earings-tab">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/ear1.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/ear2.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/ear3.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="item-product">
+                      <a href="#" class="product-thumb-link">
+                        <img decoding="async" src="images/ear5.jpg" class="img-fluid">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <div class="d-flex justify-content-between py-3">
+                        <a href="#" class="cat-parent">Women</a>
+                        <a href="#" class="wishlist">
+                          <i class="fa fa-heart"></i>
+                        </a>
+                      </div>
+                      <h4 class="product-title">
+                        <a href="#">Titanium ring in ged palladiumfinish metal</a>
+                      </h4>
+                      <div class="product-price">
+                        <ins><span class="money text-white">$300.00</span></ins>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between py-1">
+                        <div class="rating">
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <div class="basket">
+                          <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+        <h3>Jewelry<span>Astana</span></h3>
+
+        <p class="footer-links">
+            <a href="#">Home</a>
+        </p>
+
+        <p class="footer-company-name">Copyright © 2023 <strong> Jewelry Astana </strong> All rights reserved</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Astana Mangilik El C1</span>
+                Kazakhstan</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+77006463723</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a>askabakeev71@gmail.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>About the company</span>
+            <strong>Jewelry Astana</strong> 
+            Welcome to Astana Jewels, your premier online destination for exquisite jewelry in the vibrant city of Astana. Our website is dedicated to showcasing a dazzling collection of fine jewelry that exudes elegance, sophistication, and timeless beauty.
+
+        </p>
+        <div class="footer-icons">
+            <a><i class="fa fa-facebook"></i></a>
+            <a><i class="fa fa-instagram"></i></a>
+            <a><i class="fa fa-linkedin"></i></a>
+            <a><i class="fa fa-twitter"></i></a>
+            <a><i class="fa fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+  <!-- own js -->
+  <script src="main.js"></script>
+</body>
+
+</html>
